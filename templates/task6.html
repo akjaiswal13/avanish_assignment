@@ -1,0 +1,20 @@
+{% if data %}
+<h4>Occurance:</h4>
+<ul>
+    {% for row in data %}
+    <li>{{ row }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+
+<table>
+<tbody>
+{% for token in tokens %}
+<tr>
+    <td>
+        <a href="{% url 'assignment_task6_key' token %}">{{ token }}</a>
+    </td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
